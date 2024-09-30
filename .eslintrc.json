@@ -1,0 +1,27 @@
+{
+  "extends": [
+    // "next/babel",
+    "next/core-web-vitals"
+  ],
+  "rules": {
+    // we want to force semicolons
+    "semi": [
+      "error",
+      "always"
+    ],
+    // we use 2 spaces to indent our code
+    "indent": [
+      "error",
+      2
+    ],
+    // we want to avoid extraneous spaces
+    "no-multi-spaces": [
+      "error"
+    ],
+    "quotes": [
+      "error",
+      "double"
+    ],
+    "object-curly-spacing": ["error", "never"]
+  }
+}
