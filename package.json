@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@apollo/server": "^4.11.0",
+    "@as-integrations/next": "^3.1.0",
     "@headlessui/react": "^2.1.5",
     "@hookform/resolvers": "^3.9.0",
     "@next-auth/mongodb-adapter": "^1.1.3",
