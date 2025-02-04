@@ -1,4 +1,5 @@
-import {Nav, Card, Form} from "@/components";
+import Card from "@/components/Card";
+import Form from "@/components/Form";
 import {getDatabase} from "@/database";
 import {IEnterprise} from "@/typescript/enterprise";
 

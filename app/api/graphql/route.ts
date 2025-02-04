@@ -1,5 +1,5 @@
 import {startServerAndCreateNextHandler} from "@as-integrations/next";
-import {server} from "@/graphql/apollo/server";
+import {server} from "@/graphql/apolloServer";
 
 import {getServerSession} from "next-auth/next";
 import {authOptions} from "@/app/api/auth/[...nextauth]/authOptions";

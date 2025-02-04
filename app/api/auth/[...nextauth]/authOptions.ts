@@ -22,7 +22,7 @@ export const authOptions: AuthOptions = {
   adapter: MongoDBAdapter(MongoClient.connect(process.env.MONGODB_URI as string), {databaseName: process.env.MONGODB_DBNAME}),
   secret: process.env.JWT_SECRET,
   session: {
-    strategy: "jwt"
+    strategy: "database"
   },
   jwt: {encode, decode},
   providers: [
@@ -64,14 +64,17 @@ export const authOptions: AuthOptions = {
     GithubProvider({
       clientId: process.env.GITHUB_ID as string,
       clientSecret: process.env.GITHUB_SECRET as string,
+      allowDangerousEmailAccountLinking: true
     }),
     FacebookProvider({
       clientId: process.env.FACEBOOK_CLIENT_ID as string,
-      clientSecret: process.env.FACEBOOK_CLIENT_SECRET as string
+      clientSecret: process.env.FACEBOOK_CLIENT_SECRET as string,
+      allowDangerousEmailAccountLinking: true
     }),
     DiscordProvider({
       clientId: process.env.DISCORD_CLIENT_ID as string,
-      clientSecret: process.env.DISCORD_CLIENT_SECRET as string
+      clientSecret: process.env.DISCORD_CLIENT_SECRET as string,
+      allowDangerousEmailAccountLinking: true
     })
   ],
   callbacks: {
